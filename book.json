@@ -1,0 +1,38 @@
+{
+  "title": "ECMAScript Next Book",
+  "author": "zero lab fe <lishuaishuai.it@gmail.com>",
+  "description": "ECMAScript Next 系列教程",
+  "language": "zh-hans",
+  "gitbook": ">=3.2.3",
+  "root": ".",
+  "output.name": "site",
+  "links": {
+    "sidebar": {
+      "零度实验室": "https://github.com/zerolab-fe"
+    }
+  },
+  "plugins": [
+    "-lunr",
+    "-search",
+    "search-plus",
+    "splitter",
+    "advanced-emoji",
+    "tbfed-pagefooter",
+    "expandable-chapters-small",
+    "anchors",
+    "back-to-top-button"
+  ],
+  "pluginsConfig": {
+    "github": {
+      "url": "https://github.com/zerolab-fe"
+    },
+    "tbfed-pagefooter": {
+      "copyright": "Copyright &copy 零度实验室 2020",
+      "modify_label": "修订时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    }
+  },
+  "theme-default": {
+    "showLevel": true
+  }
+}
