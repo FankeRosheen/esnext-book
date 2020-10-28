@@ -1,0 +1,31 @@
+{
+  "name": "esnext-book",
+  "version": "1.0.0",
+  "description": "ESNext Book",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zerolab-fe/esnext-book.git"
+  },
+  "author": "li-shuaishuai",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/zerolab-fe/esnext-book/issues"
+  },
+  "homepage": "https://github.com/zerolab-fe/esnext-book#readme",
+  "devDependencies": {
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.0",
+    "prettier": "^2.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}
