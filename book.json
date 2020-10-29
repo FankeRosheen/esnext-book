@@ -5,7 +5,9 @@
   "language": "zh-hans",
   "gitbook": ">=3.2.3",
   "root": ".",
-  "output.name": "site",
+  "structure": {
+    "readme": "Introduction.md"
+  },
   "links": {
     "sidebar": {
       "零度实验室": "https://github.com/zerolab-fe"
@@ -20,7 +22,8 @@
     "tbfed-pagefooter",
     "expandable-chapters-small",
     "anchors",
-    "back-to-top-button"
+    "back-to-top-button",
+    "page-toc-button"
   ],
   "pluginsConfig": {
     "github": {
