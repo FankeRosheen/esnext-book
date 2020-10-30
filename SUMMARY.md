@@ -1,10 +1,9 @@
 # Summary
 
-- [Introduction](README.md)
-- [简介](Introduction.md)
+- [前言](Introduction.md)
 - [ECMAScript 2016 (ES7)](es2016/README.md)
   - [demo](es2016/demo.md)
-- [ECMAScript 2017 (ES8)](es2017/README.md)
+- [ECMAScript 2017 (ES8)](es2017/es2017.md)
   - [Async/Await](es2017/async-await.md)
   - [Shared Memory and Atomics](es2017/sharedmem.md)
   - [Object.values/Object.entries](es2017/object-values-entries.md)
