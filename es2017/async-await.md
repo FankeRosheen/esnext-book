@@ -114,9 +114,9 @@ async function test() {
 任何一个 `await` 语句后面的 Promise 对象变为 `reject` 状态，那么整个 `async` 函数都会中断执行。
 
 ```javascript
-sync function test() {
-  await Promise.reject(new Error('出错了'));
-  await Promise.resolve('hello world'); // 不会执行
+async function test() {
+  await Promise.reject(new Error('出错了'))
+  await Promise.resolve('hello world') // 不会执行
 }
 ```
 
