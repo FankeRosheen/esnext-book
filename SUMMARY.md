@@ -8,5 +8,5 @@
   - [Shared Memory and Atomics](es2017/sharedmem.md)
   - [Object.values / Object.entries](es2017/object-values-entries.md)
   - [String padding](es2017/string-pad-start-end.md)
-  - [函数参数列表结尾允许逗号](es2017/trailing-function-commas.md)
+  - [Trailing comma](es2017/trailing-function-commas.md)
   - [Object.getOwnPropertyDescriptors](es2017/object-getownpropertydescriptors.md)
