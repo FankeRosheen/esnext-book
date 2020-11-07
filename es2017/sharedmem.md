@@ -89,53 +89,225 @@ onmessage = function (ev) {
 
 #### 方法
 
+#### Atomics.store()，Atomics.load()
+
+`store()` 方法用来向共享内存写入数据，并返回该值。 `load()` 方法用来从共享内存读出数据。
+
+> Atomics.store(typedArray, index, value)  
+> Atomics.load(typedArray, index)
+
+**typedArray**
+
+一个指定类型的 shared 数组. 类型为 `Int8Array`, `Uint8Array`, `Int16Array`, `Uint16Array`, `Int32Array`, 或者 `Uint32Array` 其中一个。
+
+**index**
+
+`typedArray` 中用来存储 value 的位置。
+
+**value**
+
+要存储的数字。
+
+```javascript
+var sab = new SharedArrayBuffer(1024)
+var ta = new Uint8Array(sab)
+
+Atomics.store(ta, 0, 12) // 12
+Atomics.load(ta, 0) // 12
+```
+
+#### Atomics.exchange()
+
+将数组中指定的元素更新为给定的值，并返回该元素更新前的值。
+
+> Atomics.exchange(typedArray, index, value)
+
+```javascript
+var sab = new SharedArrayBuffer(1024)
+var ta = new Uint8Array(sab)
+
+Atomics.exchange(ta, 0, 12) // returns 0, the old value
+Atomics.load(ta, 0) // 12
+```
+
+#### Atomics.wait()，Atomics.notify()
+
+这两个方法相当于锁内存，即在一个线程进行操作时，让其他线程休眠（建立锁），等到操作结束，再唤醒那些休眠的线程（解除锁）。
+
+> Atomics.wait(typedArray, index, value[, timeout])
+
+**typedArray**
+
+一个共享的 `Int32Array`。
+
+**index**
+
+`typedArray` 中要唤醒的目标索引。
+
+**value**
+
+给定需要检测的位置索引的预期值。
+
+**timeout**
+
+可选，超时前等待的毫秒数。 `Infinity`, 如未提供该参数，将为无穷大。
+
+> Atomics.notify(typedArray, index, count)
+
+**count**
+
+要通知的正在休眠的代理的数量。默认是 `+Infinity`。
+
+**返回值**
+
+一个 String 字符串，值为 "ok", "not-equal", 或 "timed-out" 三种之一。
+
+如果 `sharedArray[index]` 不等于 `value`，就返回字符串 `not-equal`，否则就进入休眠。如果 `Atomics.notify()` 方法唤醒，就返回字符串 `ok`；如果因为超时唤醒，就返回字符串 `timed-out`。
+
+```javascript
+// Worker 线程
+self.addEventListener(
+  'message',
+  (event) => {
+    const sharedArray = new Int32Array(event.data)
+    const arrayIndex = 0
+    const expectedStoredValue = 50
+    Atomics.wait(sharedArray, arrayIndex, expectedStoredValue)
+    console.log(Atomics.load(sharedArray, arrayIndex))
+  },
+  false,
+)
+```
+
+上面代码中，`Atomics.wait()` 方法等同于告诉 Worker 线程，只要满足给定条件（`sharedArray` 的 `0` 号位置等于 `50`），就在这一行 Worker 线程进入休眠。
+
+```javascript
+// 主线程
+const newArrayValue = 100
+Atomics.store(sharedArray, 0, newArrayValue)
+const arrayIndex = 0
+const queuePos = 1
+Atomics.notify(sharedArray, arrayIndex, queuePos)
+```
+
+上面代码中，sharedArray 的 0 号位置改为 100，然后就执行 Atomics.notify()方法，唤醒在 sharedArray 的 0 号位置休眠队列里的一个线程。
+
+注意，浏览器的主线程不宜设置休眠，这会导致用户失去响应。而且，主线程实际上会拒绝进入休眠。
+
 ##### Atomics.add()
 
 将指定位置上的数组元素与给定的值相加，并返回相加前该元素的值。
+
+> Atomics.add(typedArray, index, value)
+
+```javascript
+var sab = new SharedArrayBuffer(1024)
+var ta = new Uint8Array(sab)
+
+Atomics.add(ta, 0, 12) // returns 0, the old value
+Atomics.load(ta, 0) // 12
+```
 
 ##### Atomics.and()
 
 将指定位置上的数组元素与给定的值相与，并返回与操作前该元素的值。
 
+> Atomics.and(typedArray, index, value)
+
+```javascript
+var sab = new SharedArrayBuffer(1024)
+var ta = new Uint8Array(sab)
+ta[0] = 5
+
+Atomics.and(ta, 0, 1) // returns 0, the old value
+Atomics.load(ta, 0) // 1
+```
+
 ##### Atomics.compareExchange()
 
 如果数组中指定的元素与给定的值相等，则将其更新为新的值，并返回该元素原先的值。
 
-##### Atomics.exchange()
+> Atomics.compareExchange(typedArray, index, expectedValue, replacementValue)
 
-将数组中指定的元素更新为给定的值，并返回该元素更新前的值。
+**expectedValue**
 
-##### Atomics.isLockFree(size)
+用于比较的值。
 
-可以用来检测当前系统是否支持硬件级的原子操作。对于指定大小的数组，如果当前系统支持硬件级的原子操作，则返回 true；否则就意味着对于该数组，Atomics 对象中的各原子操作都只能用锁来实现。此函数面向的是技术专家。
+**replacementValue**
 
-##### Atomics.load()
+将要替换上的值。
 
-返回数组中指定元素的值。
+```javascript
+var sab = new SharedArrayBuffer(1024)
+var ta = new Uint8Array(sab)
+ta[0] = 7
 
-##### Atomics.notify()
+Atomics.compareExchange(ta, 0, 7, 12) // returns 7, the old value
+Atomics.load(ta, 0) // 12
+```
 
-唤醒等待队列中正在数组指定位置的元素上等待的线程。返回值为成功唤醒的线程数量。
+##### Atomics.isLockFree()
+
+返回一个布尔值，表示 `Atomics` 对象是否可以处理某个 `size` 的内存锁定。如果返回 `false`，应用程序就需要自己来实现锁定。
+
+> Atomics.isLockFree(size)
+
+```javascript
+Atomics.isLockFree(1) // true
+Atomics.isLockFree(2) // true
+Atomics.isLockFree(3) // false
+Atomics.isLockFree(4) // true
+Atomics.isLockFree(5) // false
+Atomics.isLockFree(6) // false
+Atomics.isLockFree(7) // false
+Atomics.isLockFree(8) // false
+Atomics.isLockFree(Float64Array.BYTES_PER_ELEMENT) // false,Atomics方法无法处理Float64Array
+```
 
 ##### Atomics.or()
 
 将指定位置上的数组元素与给定的值相或，并返回或操作前该元素的值。
 
-##### Atomics.store()
+> Atomics.or(typedArray, index, value)
 
-将数组中指定的元素设置为给定的值，并返回该值。
+```javascript
+var sab = new SharedArrayBuffer(1024)
+var ta = new Uint8Array(sab)
+ta[0] = 2
+
+Atomics.or(ta, 0, 1) // returns 2, the old value
+Atomics.load(ta, 0) // 3
+```
 
 ##### Atomics.sub()
 
 将指定位置上的数组元素与给定的值相减，并返回相减前该元素的值。
 
-##### Atomics.wait()
+> Atomics.sub(typedArray, index, value)
 
-检测数组中某个指定位置上的值是否仍然是给定值，是则保持挂起直到被唤醒或超时。返回值为 "ok"、"not-equal" 或 "time-out"。调用时，如果当前线程不允许阻塞，则会抛出异常（大多数浏览器都不允许在主线程中调用 wait()）。
+```javascript
+const sab = new SharedArrayBuffer(1024)
+const ta = new Uint8Array(sab)
+ta[0] = 48
+
+Atomics.sub(ta, 0, 12) // returns 48, the old value
+Atomics.load(ta, 0) // 36
+```
 
 ##### Atomics.xor()
 
 将指定位置上的数组元素与给定的值相异或，并返回异或操作前该元素的值。
+
+> Atomics.xor(typedArray, index, value)
+
+```javascript
+const sab = new SharedArrayBuffer(1024)
+const ta = new Uint8Array(sab)
+ta[0] = 5
+
+Atomics.xor(ta, 0, 1) // returns 5, the old value
+Atomics.load(ta, 0) // 4
+```
 
 ## 参考
 
