@@ -1,10 +1,10 @@
-# ES 2016
+# Array.prototype.includes()
 
-## Array.prototype.includes()
+## 简介
 
 `includes()` 方法用来判断一个数组是否包含一个指定的值。如果包含则返回 `true`，否则返回 `false`。
 
-### 语法
+## 语法
 
 > arr.includes(valueToFind[, fromIndex])
 
@@ -16,9 +16,9 @@
 
 可选，从 `fromIndex` 索引处开始查找 `valueToFind`。如果为负值，则按升序从 `array.length + fromIndex` 的索引开始搜 （即使从末尾开始往前跳 `fromIndex` 的绝对值个索引，然后往后搜寻）。默认为 0。
 
-### 示例
+## 示例
 
-#### 基本使用
+### 基本使用
 
 ```javascript
 [1, 2, 3].includes(2) // true
@@ -28,7 +28,7 @@
 [1, 2, NaN)].includes(NaN) // true
 ```
 
-#### fromIndex 大于等于数组长度
+### fromIndex 大于等于数组长度
 
 如果 `fromIndex` 大于等于数组的长度，则会返回 `false`，且该数组不会被搜索。
 
@@ -39,7 +39,7 @@ arr.includes('c', 3) // false
 arr.includes('c', 100) // false
 ```
 
-#### 计算出的索引小于 0
+### 计算出的索引小于 0
 
 如果 `fromIndex` 为负值，计算出的索引将作为开始搜索 `searchElement` 的位置。如果计算出的索引小于 0，则整个数组都会被搜索。
 
@@ -56,21 +56,6 @@ arr.includes('c', -100) // true
 arr.includes('a', -2) // false
 ```
 
-## 求幂运算符(\*\*)
-
-求幂运算符 `**` 等价于 `Math.pow()`，但是它被引入语言本身，而不是库函数。
-
-```javascript
-Math.pow(x, y) // 9
-
-let squared = 3 ** 2 // 9
-
-let num = 3
-num **= 2
-console.log(num) // 9
-```
-
 ## 参考
 
-[Array.prototype.includes](https://github.com/tc39/Array.prototype.includes/)  
-[Exponentiation Operator](https://github.com/tc39/proposal-exponentiation-operator)
+[Array.prototype.includes](https://github.com/tc39/Array.prototype.includes/)
