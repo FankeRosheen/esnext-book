@@ -2,7 +2,7 @@
 
 - [前言](Introduction.md)
 - [ECMAScript 2016 (ES7)](es2016/es2016.md)
-  - [Array.prototype.includes](es2016/Array.prototype.includes.md)
+  - [Array.prototype.includes](es2016/array-prototype-includes.md)
   - [求幂运算符(\*\*)](es2016/proposal-exponentiation-operator.md)
 - [ECMAScript 2017 (ES8)](es2017/es2017.md)
   - [Async / Await](es2017/async-await.md)
