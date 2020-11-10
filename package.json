@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "ESNext Book",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "remark es*/ -f -q"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,10 @@
   "devDependencies": {
     "husky": "^4.3.0",
     "lint-staged": "^10.5.0",
-    "prettier": "^2.1.2"
+    "prettier": "^2.1.2",
+    "pretty-quick": "^3.1.0",
+    "remark-cli": "^9.0.0",
+    "remark-preset-lint-recommended": "^5.0.0"
   },
   "husky": {
     "hooks": {
@@ -26,6 +29,9 @@
     }
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "es*/*.md": [
+      "pretty-quick --staged",
+      "remark es*/ -f -q"
+    ]
   }
 }
