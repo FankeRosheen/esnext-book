@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="zerolab-fe.github.io/esnext-book/">
+    <img width="200" src="https://raw.githubusercontent.com/zerolab-fe/esnext-book/main/assets/logo.svg">
+  </a>
+</p>
+
 <h1 align="center">ECMAScript Next 系列教程</h1>
 
 <div align="center">
