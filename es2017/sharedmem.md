@@ -134,7 +134,7 @@ Atomics.load(ta, 0) // 12
 
 这两个方法相当于锁内存，即在一个线程进行操作时，让其他线程休眠（建立锁），等到操作结束，再唤醒那些休眠的线程（解除锁）。
 
-> Atomics.wait(typedArray, index, value[, timeout])
+> Atomics.wait(typedArray, index, value\[, timeout\])
 
 **typedArray**
 

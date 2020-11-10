@@ -6,8 +6,8 @@
 
 ## 语法
 
-> str.padStart(targetLength [, padString])  
-> str.padEnd(targetLength [, padString])
+> str.padStart(targetLength \[, padString\])  
+> str.padEnd(targetLength \[, padString\])
 
 **参数：**
 
