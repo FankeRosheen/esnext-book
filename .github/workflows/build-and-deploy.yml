@@ -4,16 +4,13 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        uses: actions/checkout@v2.3.1
         with:
           persist-credentials: false
 
@@ -22,7 +19,7 @@ jobs:
         with:
           node-version: 10.x
 
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+      - name: Install and Build 🔧
         run: |
           npm install gitbook-cli -g
           gitbook install
@@ -32,6 +29,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: _book # The folder the action should deploy.
+          BRANCH: gh-pages
+          FOLDER: _book
           CLEAN: true # Automatically remove deleted files from the deploy branch
