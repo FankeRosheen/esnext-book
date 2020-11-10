@@ -6,8 +6,10 @@
 
 ## 🙋 What are web components?
 
-    Web components 是一套标准，允许开发者创建新的自定义、可重用、封装的 HTML 元素，以便在 Web 页面和 Web 应用程序中使用。自定义组件和小部件建立在 Web components 标准之上，可以跨现代浏览器工作，并且可以与**任何 JavaScript 库或框架**一起使用。
-    Web components 基于现有的 Web 标准。支持 Web components 的特性目前正被添加到 HTML 和 DOM 规范中，让 web 开发人员可以通过封装样式和自定义行为轻松扩展 HTML。
+    Web components 是一套标准，允许开发者创建新的自定义、可重用、封装的 HTML 元素，以便在 Web 页面和 Web 应用程序中使用。
+    自定义组件和小部件建立在 Web components 标准之上，可以跨现代浏览器工作，并且可以与**任何 JavaScript 库或框架**一起使用。
+    Web components 基于现有的 Web 标准。支持 Web components 的特性目前正被添加到 HTML 和 DOM 规范中，
+    让 web 开发人员可以通过封装样式和自定义行为轻松扩展 HTML。
     来源：https://www.webcomponents.org/introduction
 
     Web Components 是一套不同的技术，允许您创建可重用的定制元素（它们的功能封装在您的代码之外）并且在您的web应用中使用它们
