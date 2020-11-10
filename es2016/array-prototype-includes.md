@@ -6,7 +6,7 @@
 
 ## 语法
 
-> arr.includes(valueToFind[, fromIndex])
+> arr.includes(valueToFind\[, fromIndex\])
 
 **valueToFind**
 

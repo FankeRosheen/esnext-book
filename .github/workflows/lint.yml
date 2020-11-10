@@ -6,7 +6,7 @@ on:
       - release
 
 jobs:
-  build-and-deploy:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 10.x
 
-      - name: Install and lint 🔧
+      - name: Install and Lint 🔧
         run: |
           npm install
           npm run lint
