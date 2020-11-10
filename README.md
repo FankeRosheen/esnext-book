@@ -1,4 +1,16 @@
-# esnext-book
+<h1 align="center">ECMAScript Next 系列教程</h1>
+
+<div align="center">
+  <a href="https://github.com/zerolab-fe/esnext-book/actions?query=workflow%3Adeploy">
+    <img alt="GitHub actions deploy" src="https://github.com/zerolab-fe/esnext-book/workflows/deploy/badge.svg" />
+  </a>
+  <a href="https://github.com/zerolab-fe/esnext-book/actions?query=workflow%lint">
+    <img alt="GitHub actions lint" src="https://github.com/zerolab-fe/esnext-book/workflows/lint/badge.svg" />
+  </a>
+  <a href="https://github.com/zerolab-fe/esnext-book">
+    <img alt="GitHub license" src="https://img.shields.io/github/license/zerolab-fe/esnext-book">
+  </a>
+</div>
 
 ## 安装
 
