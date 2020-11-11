@@ -1,5 +1,48 @@
 # Web Components 的生命周期
 
+上一篇中简单的介绍了一下一些关键名词概念：`Custom Elements`、`Shadow DOM`、`HTML templates`
+本篇中就开始介绍，比较重要内容，关于自定义元素的 生命周期
+
+## ♻️ 组件的生命周期
+
+让我们看一下自定义元素的生命周期
+
+```js
+class MyElement extends HTMLElement {
+  constructor() {
+    // always call super() first
+    super()
+    console.log('constructed!')
+  }
+
+  connectedCallback() {
+    console.log('connected!')
+  }
+
+  disconnectedCallback() {
+    console.log('disconnected!')
+  }
+
+  attributeChangedCallback(name, oldVal, newVal) {
+    console.log(`Attribute: ${name} changed!`)
+  }
+
+  adoptedCallback() {
+    console.log('adopted!')
+  }
+}
+
+window.customElements.define('my-element', MyElement)
+```
+
+## constructor() 构造函数
+
+`constructor()`方法是元素挂载之前运行的，一般会在这个函数中设置一些元素的**初始状态**，还有**事件的监听** 以及创建 `Shadow Dom`
+
+> （类比 `Vue` 中的 `create()`）
+
+## 代码备注
+
 ```js
 class MyElementLifecycle extends HTMLElement {
   // 元素初始化的时候执行

@@ -38,4 +38,6 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
 
 ## 浏览器的支持情况
 
+Edge 在发布的 19 版本中开始提供支持。对于旧的浏览器，可以使用 [polyfill](https://github.com/webcomponents/webcomponentsjs) 来兼容 IE11
+
 ![image](https://user-images.githubusercontent.com/24740506/98744397-9856a000-23ec-11eb-9d63-80797ffaa36a.png)
