@@ -9,3 +9,7 @@
   - [String padding](es2017/string-pad-start-end.md)
   - [Trailing comma](es2017/trailing-function-commas.md)
   - [Object.getOwnPropertyDescriptors](es2017/object-getownpropertydescriptors.md)
+- [WebComponent](Webcomponent/introduction.md)
+  - [前言](Webcomponent/introduction.md)
+  - [概念](Webcomponent/Web-components-concepts.md)
+  - [生命周期](Webcomponent/Web-components-lifecycle.md)
