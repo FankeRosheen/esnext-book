@@ -98,11 +98,9 @@ attributeChangedCallback(name, oldVal, newVal) {
 
 #### 为什么 `attributeChangedCallback` 要在 `connectedCallback` 之前执行 ?
 
-回想一下上面每个函数的含义，属性需要在元素插入到 DOM 树中的时候，要保证能够被获取的；所以合理的话就是需要`connectedCallback`获取的属性是通过`attributeChangedCallback`处理过可使用的；
+回想一下，web 组件上的属性主要用来初始化配置。这意味着当组件被插入`DOM`时，这些配置需要可以被访问了。因此`attributeChangedCallback`要在`connectedCallback`之前执行。 这意味着你需要根据某些属性的值，在`Shadow DOM`中配置任何节点，那么你需要在构造函数中引用这些节点，而不是在`connectedCallback`中引用它们。
 
-这意味着如果需要根据某些属性的值配置 `shadow DOM` 中的任何节点，需要在 `constructor` 中而不是在 `connectedCallback` 中再次操作`DOM`节点
-
-例如，如果在组件中有一个`id="container"`的元素，当观察到的属性 `disabled` 更改时，您需要给这个元素一个灰色背景，在 `constructor` 中引用这个元素，保证它在 `attributeChangedCallback` 中可用
+例如，如果你有一个`ID`为`container`的组件，并且你需要在根据属性的改变来决定是否给这个元素添加一个灰色的背景，那么你可以在构造函数中引用这个元素，以便它可以在`attributeChangedCallback`中使用：
 
 ```js
 constructor() {
@@ -118,7 +116,11 @@ attributeChangedCallback(attr, oldVal, newVal) {
     }
   }
 }
+
+
 ```
+
+如果你一直等到`connectedCallback`再去创建`this.container`。然后在第一时间调用`attributeChangedCallback`，它还是不可用的。因此尽管你应该尽可能的延后你组件的`connectedCallback`，但在这种情况下是不可能的。
 
 ## customels.define
 

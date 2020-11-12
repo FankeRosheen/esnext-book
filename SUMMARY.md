@@ -13,3 +13,4 @@
   - [前言](Webcomponent/introduction.md)
   - [概念](Webcomponent/Web-components-concepts.md)
   - [生命周期](Webcomponent/Web-components-lifecycle.md)
+  - [构建一个自定义标签](Webcomponent/web-components-my-modal.md)
