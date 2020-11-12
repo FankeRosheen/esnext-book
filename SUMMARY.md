@@ -13,7 +13,7 @@
   - [Object.getOwnPropertyDescriptors](es2017/object-getownpropertydescriptors.md)
 - [ECMAScript 2020 (ES11)](es2020/es2020.md)
   - [String.prototype.matchAll](es2020/string-matchall.md)
-  - [import()](es2020/dynamic-import.md)
+  - [Dynamic Import](es2020/dynamic-import.md)
   - [BigInt](es2020/bigint.md)
   - [Promise.allSettled](es2020/promise-allSettled.md)
   - [globalThis](es2020/global.md)
