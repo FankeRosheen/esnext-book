@@ -102,7 +102,7 @@ attributeChangedCallback(name, oldVal, newVal) {
 
 这意味着如果需要根据某些属性的值配置 `shadow DOM` 中的任何节点，需要在 `constructor` 中而不是在 `connectedCallback` 中再次操作`DOM`节点
 
-例如，如果在组件中有一个`id="container"`的元素，当观察到的属性禁用更改时，您需要给这个元素一个灰色背景，在`constructor`中引用这个元素，保证它在 `attributeChangedCallback` 中可用
+例如，如果在组件中有一个`id="container"`的元素，当观察到的属性 `disabled` 更改时，您需要给这个元素一个灰色背景，在 `constructor` 中引用这个元素，保证它在 `attributeChangedCallback` 中可用
 
 ```js
 constructor() {
@@ -118,6 +118,25 @@ attributeChangedCallback(attr, oldVal, newVal) {
     }
   }
 }
+```
+
+## customels.define
+
+另外，在自定义元素未注册时候使用它，它会仅仅作为 `HTMLUnknownElement`，一个实例；代表着一个无效的 HTML 元素，派生自 HTMLElement 接口,，但它没有任何可用的附加属性或方法
+
+然后通过 `customements.define()` 注册时，它会继承`HTMLElement`这个类。这个过程称为升级。
+通过 `customElements.whenDefined`方法，当自定义元素被定义时一个 `Promise` 返回`{jsxref("undefined")}}`. 如果自定义元素已经被定义，则 `resolve` 立即执行
+
+```js
+
+Promise<> customElements.whenDefined(name);
+
+```
+
+```js
+customElements.whenDefined('my-element').then(() => {
+  // my-element is now defined
+})
 ```
 
 ## 代码备注
@@ -184,6 +203,6 @@ class MyElementLifecycle extends HTMLElement {
    * constructor -> attributeChangedCallback -> connectedCallback
    */
 }
-// 不是生命周期的API 但是肯定主要操作这一步的 注册
+// 不是生命周期的API 但是非常重要 注册
 window.customElements.define('my-element-lifecycle', MyElementLifecycle)
 ```
