@@ -35,11 +35,22 @@ class MyElement extends HTMLElement {
 window.customElements.define('my-element', MyElement)
 ```
 
-## constructor() 构造函数
+## constructor()
 
 `constructor()`方法是元素挂载之前运行的，一般会在这个函数中设置一些元素的**初始状态**，还有**事件的监听** 以及创建 `Shadow Dom`
 
-> （类比 `Vue` 中的 `create()`）
+> 类比 `Vue` 中的 `create()`，`React`中 `class` 组件中的 `constructor()`它们两个是一样的
+
+## connectedCallback()
+
+当元素插入到 DOM 中时，将调用 `connectedCallback`， 通常，组件的一些`样式`或者其他需要`获取元素的状态` 应该在 `connectedCallback` 进行设置，因为在这里才能确定元素的所有属性和子元素都是可用的。`constructor` 一般应该只用于初始化状态和设置`shadow DOM`。
+
+### `constructor` 和 `connectedCallback` 之间的区别
+
+创建元素时调用`constructor`，
+已经插入到 `DOM` 元素后调用 `connectedCallback`
+
+> 可以将其与`vue`的`mount`方法、`React`的`componentDidMount`方法进行比较
 
 ## 代码备注
 
