@@ -2,17 +2,17 @@
 
 ## 一、编写 自定义标签 wheat-modal
 
-本文演示如何把这个弹层，写成 Web Components 组件，这里是最后的[完整代码](https://github.com/glean-wheat/wheat-ui/tree/master/modal)。
+本文演示如何把这个弹层，写成 `Web Components` 组件，这里是最后的[完整代码](https://github.com/glean-wheat/wheat-ui/tree/master/modal)。
 
 ![image](https://user-images.githubusercontent.com/24740506/99131610-9be96180-264e-11eb-90ed-a5c8065209dc.png)
 
 网页只要插入下面的代码，就可以正常使用弹层
 
-```js
+```html
 <wheat-modal></wheat-modal>
 ```
 
-这种自定义的 HTML 标签，称为自定义元素（`custom element`）。根据规范，自定义元素的名称必须包含连词线，`<wheat-modal>`不能写成`<wheatmodal>`，这样做是为了避免元素名称冲突，用与区别原生的 HTML 元素。自定义元素也不能自动关闭，HTML 只允许少数元素自动关闭。 因为 HTML 解析对对安全方面有很高的要求。
+这种自定义的 HTML 标签，称为自定义元素（`custom element`）。根据规范，自定义元素的名称必须包含连词线，`<wheat-modal>`不能写成`<wheatmodal>`，这样做是为了避免元素名称冲突，用与区别原生的 `HTML` 元素。自定义元素也不能自动关闭，`HTML` 只允许少数元素自动关闭。 因为 `HTML` 解析对对安全方面有很高的要求。
 
 ## 二、customElements.define()
 
@@ -28,7 +28,7 @@ class WheatModal extends HTMLElement {
 
 上面代码中，`WheatModal` 就是自定义元素的类。注意，这个类的父类是 `HTMLElement`，因此继承了 HTML 元素的特性。
 
-接着，使用浏览器原生的 customElements.define()方法，告诉浏览器<wheat-modal>元素与这个类关联。
+接着，使用浏览器原生的 `customElements.define()`方法，告诉浏览器`<wheat-modal>`元素与这个类关联。
 
 ```js
 window.customElements.define('wheat-modal', WheatModal)
@@ -79,9 +79,17 @@ class WheatModal extends HTMLElement {
 
 完成这一步以后，自定义元素内部的 `DOM` 结构就**已经生成**了。
 
-## 四、<template>标签
+## 四、`<template>标签`
 
 使用 `JavaScript` 写上一节的 DOM 结构很麻烦，`Web Components API` 提供了`<template>`标签，可以在它里面使用 `HTML` 定义 `DOM` 以及 `css`
+
+我们一步一步来。我们首先通过调用
+
+```js
+const template = document.createElement('template')
+```
+
+创建一个 `<template >` ，然后在其中设置一些 `HTML`。
 
 ```js
 const WheatModaltemplate = document.createElement('template')
@@ -128,7 +136,7 @@ class WheatModal extends HTMLElement {
 ```
 
 这里可以看到，`render` 方法发生了改变
-上面代码中，获取`<template>`节点以后，`克隆`了它的所有子元素，这是因为可能有多个自定义元素的实例，这个模板还要留给其他实例使用，所以不能直接移动它的子元素。
+上面代码中，获取`<template>`节点以后，`克隆`了它的所有子元素，这是因为可能有多个自定义元素的实例，这个模板还要留给其他实例使用，所以不能直接移动它的子元素。另外，我们只在模板上设置 `innerHTML` 一次。我们使用模板的原因是克隆模板比调用要容易，消耗性能较少
 
 [完整代码](https://github.com/glean-wheat/wheat-ui/)
 
