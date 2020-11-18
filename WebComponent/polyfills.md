@@ -1,7 +1,7 @@
 # webcomponent-polyfill
 
 在浏览器提供广泛支持前，可以暂时使用 polyfill。
-
+编写中
 ## 参考文章
 
 - https://github.com/webcomponents/polyfills
