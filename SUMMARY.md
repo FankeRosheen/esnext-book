@@ -17,4 +17,8 @@
   - [自定义标签中的事件](webcomponent/web-components-event.md)
   - [shadow Dom](webcomponent/shadow-DOM.md)
   - [shadow Dom 中 slots](webcomponent/shadow-DOM-slots.md)
+  - [模板元素 template](webcomponent/template.md)
   - [webcomponent 兼容方案](webcomponent/polyfills)
+  - [单元测试](webcomponent/polyfills)
+  - [生态相关介绍](webcomponent/polyfills)
+  - [组件库介绍](webcomponent/polyfills)
