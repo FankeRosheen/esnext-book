@@ -1,4 +1,4 @@
-# 关于 Shadow Dom 事件以及 solt
+# 自定义标签中的事件
 
 ## 常规事件监听
 
@@ -94,5 +94,3 @@ document.querySelector('my-element').addEventListener('custom', e => console.log
 ```
 
 整个内容比较简单，这样可以自定方法为组件自定义标签服务。同时也能方便传递参数。
-
-# slots

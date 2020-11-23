@@ -14,6 +14,7 @@
   - [概念](webcomponent/web-components-concepts.md)
   - [生命周期](webcomponent/web-components-lifecycle.md)
   - [构建一个自定义标签](webcomponent/web-components-my-modal.md)
+  - [自定义标签中的事件](webcomponent/web-components-event.md)
   - [shadow Dom](webcomponent/shadow-DOM.md)
-  - [shadow Dom 中的事件](webcomponent/shadow-DOM-event.md)
+  - [shadow Dom 中 slots](webcomponent/shadow-DOM-slots.md)
   - [webcomponent 兼容方案](webcomponent/polyfills)
