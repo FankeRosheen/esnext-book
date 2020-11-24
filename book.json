@@ -5,9 +5,6 @@
   "language": "zh-hans",
   "gitbook": ">=3.2.3",
   "root": ".",
-  "structure": {
-    "readme": "Introduction.md"
-  },
   "links": {
     "sidebar": {
       "零度实验室": "https://github.com/zerolab-fe"
@@ -38,8 +35,8 @@
       "modify_format": "YYYY-MM-DD HH:mm:ss"
     },
     "favicon-absolute": {
-      "favicon": "/assets/favicon.ico",
-      "appleTouchIconPrecomposed152": "/assets/apple-touch-icon-precomposed-152.png"
+      "favicon": "https://github.com/zerolab-fe/esnext-book/assets/favicon.ico",
+      "appleTouchIconPrecomposed152": "https://github.com/zerolab-fe/esnext-book/assets/apple-touch-icon-precomposed-152.png"
     },
     "theme-default": {
       "showLevel": true
