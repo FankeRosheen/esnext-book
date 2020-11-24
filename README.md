@@ -18,32 +18,18 @@
   </a>
 </div>
 
-## 安装
+## 说明
 
-安装依赖
+这里更多是对知识点的梳理，其中借鉴和参考了很多文章和教程，也有自己的思考和总结。如果你恰巧看到本教程，或者叫笔记，感谢你的阅读，请移步 GIthub 点 star，这将是对作者极大的鼓励。
 
-```bash
-$ npm install
-```
+如果你读完本教程有收获，请帮忙传播，让更多人受益。如果有不妥之处，欢迎提 MR 修正。
 
-全局安装 gitbook
+## 目录
 
-```bash
-$ npm install gitbook -g
-```
+## 作者
 
-## 使用
-
-```bash
-$ gitbook serve
-```
-
-## 分支规范
-
-主干分支：`main`  
-测试分支：`release`  
-功能分支：`feature/*`
-
-`feature/*`：基于 `main` 分支 checkout 新的分支，分支开发完成后发起 MR 合并到 `release` 分支  
-`release`：合并到此分支的代码需要确保无误，经过严格校验。此分支在合适的时机，由管理员合并到 `main`  
-`main`：合并到此分支的代码，会触发 CI 自动发布
+<table>
+  <tr>
+    <td align="center"><a href="https://www.lishuaishuai.com"><img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/20487014?s=460&u=5af71d67e02d53343d5432cc8f32243854c6de21&v=4" width="100px"><br /><sub><b>木子朗</b></sub></a><br /></a></td>
+  </tr>
+</table>

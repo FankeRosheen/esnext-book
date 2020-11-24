@@ -5,9 +5,6 @@
   "language": "zh-hans",
   "gitbook": ">=3.2.3",
   "root": ".",
-  "structure": {
-    "readme": "Introduction.md"
-  },
   "links": {
     "sidebar": {
       "零度实验室": "https://github.com/zerolab-fe"

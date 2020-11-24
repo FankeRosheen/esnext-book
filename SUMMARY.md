@@ -1,6 +1,6 @@
 # Summary
 
-- [前言](Introduction.md)
+- [前言](README.md)
 - [ECMAScript 2020 (ES11)](es2020/es2020.md)
   - [String.prototype.matchAll](es2020/string-matchall.md)
   - [Dynamic Import](es2020/dynamic-import.md)
