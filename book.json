@@ -1,6 +1,6 @@
 {
   "title": "ECMAScript Next Book",
-  "author": "zero lab fe <lishuaishuai.it@gmail.com>",
+  "author": "zero lab fe",
   "description": "ECMAScript Next 系列教程",
   "language": "zh-hans",
   "gitbook": ">=3.2.3",
@@ -10,7 +10,7 @@
   },
   "links": {
     "sidebar": {
-      "零度实验室": "http://www.wugaoliang.vip/"
+      "零度实验室": "https://github.com/zerolab-fe"
     }
   },
   "plugins": [
