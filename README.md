@@ -16,6 +16,9 @@
   <a href="https://github.com/zerolab-fe/esnext-book">
     <img alt="GitHub license" src="https://img.shields.io/github/license/zerolab-fe/esnext-book">
   </a>
+  <a href="https://github.com/zerolab-fe/esnext-book/pulls">
+    <img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" />
+  </a>
 </div>
 
 ## 说明
