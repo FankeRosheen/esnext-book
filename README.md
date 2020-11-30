@@ -19,13 +19,16 @@
   <a href="https://github.com/zerolab-fe/esnext-book/pulls">
     <img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" />
   </a>
+  <a href="https://github.com/zerolab-fe/esnext-book/stargazers">
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/zerolab-fe/esnext-book">
+  </a>
 </div>
 
 ## 说明
 
-这里更多是对知识点的梳理，其中借鉴和参考了很多文章和教程，也有自己的思考和总结。如果你恰巧看到本教程，或者叫笔记，感谢你的阅读，请移步 GIthub 点 star，这将是对作者极大的鼓励。
+ECMAScript Next 系列教程，是对 ECMAScript 新特性的整理学习笔记。
 
-如果你读完本教程有收获，请帮忙传播，让更多人受益。如果有不妥之处，欢迎提 MR 修正。
+如果你读完本教程有收获，请帮忙传播，让更多人受益。如果有不妥之处，欢迎提 MR 更正。
 
 ## 目录
 
