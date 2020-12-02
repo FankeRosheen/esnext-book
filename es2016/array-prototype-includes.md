@@ -55,7 +55,3 @@ arr.includes('b', -100) // true
 arr.includes('c', -100) // true
 arr.includes('a', -2) // false
 ```
-
-## 参考
-
-[Array.prototype.includes](https://github.com/tc39/Array.prototype.includes/)

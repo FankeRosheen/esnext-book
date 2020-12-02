@@ -13,7 +13,3 @@ let num = 3
 num **= 2
 console.log(num) // 9
 ```
-
-## 参考
-
-[Exponentiation Operator](https://github.com/tc39/proposal-exponentiation-operator)

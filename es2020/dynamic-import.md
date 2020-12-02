@@ -96,8 +96,3 @@ async function main() {
   ])
 }
 ```
-
-## 参考
-
-[proposal-dynamic-import](https://github.com/tc39/proposal-dynamic-import)  
-[Module 的语法 - ECMAScript 6 入门](https://es6.ruanyifeng.com/#docs/module#import)

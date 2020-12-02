@@ -308,10 +308,3 @@ ta[0] = 5
 Atomics.xor(ta, 0, 1) // returns 5, the old value
 Atomics.load(ta, 0) // 4
 ```
-
-## 参考
-
-[Shared memory and atomics for ECMAscript](https://github.com/tc39/ecmascript_sharedmem)  
-[ArrayBuffer - ECMAScript 6 入门](https://es6.ruanyifeng.com/?search=SharedArrayBuffer&x=11&y=11#docs/arraybuffer#SharedArrayBuffer)  
-[SharedArrayBuffer](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)  
-[Atomics](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Atomics)

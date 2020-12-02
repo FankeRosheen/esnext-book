@@ -41,7 +41,3 @@
 'x'.padStart(4) // '   x'
 'x'.padEnd(4) // 'x   '
 ```
-
-## 参考
-
-[String.prototype.padStart / String.prototype.padEnd](https://github.com/tc39/proposal-string-pad-start-end)

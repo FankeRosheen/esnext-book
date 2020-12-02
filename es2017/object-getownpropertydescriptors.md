@@ -89,8 +89,3 @@ subclass.prototype = Object.create(
   }),
 )
 ```
-
-## 参考
-
-[对象的新增方法 - ECMAScript 6 入门](https://es6.ruanyifeng.com/#docs/object-methods#Object-getOwnPropertyDescriptors)  
-[tc39/Object.getOwnPropertyDescriptors](https://github.com/tc39/proposal-object-getownpropertydescriptors)

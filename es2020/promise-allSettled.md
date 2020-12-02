@@ -22,7 +22,3 @@ Promise.allSettled(promises).then((results) => results.forEach((result) => conso
 该方法返回的新的 Promise 实例，一旦结束，状态总是 `fulfilled`，不会变成 `rejected`。状态变成 `fulfilled` 后，Promise 的监听函数接收到的参数是一个数组，该数组的每个成员都是一个对象，对应传入 `Promise.allSettled()`的两个 Promise 实例。每个对象都有 `status` 属性，该属性的值只可能是字符串 `fulfilled` 或字符串 `rejected`。`fulfilled` 时，对象有 `value` 属性，`rejected` 时有 `reason` 属性，对应两种状态的返回值。
 
 有时候，我们不关心异步操作的结果，只关心这些操作有没有结束。这时，`Promise.allSettled()`方法就很有用。
-
-## 参考
-
-[Promise.allSettled](https://github.com/tc39/proposal-promise-allSettled)

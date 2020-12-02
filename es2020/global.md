@@ -44,8 +44,3 @@ if (typeof globalThis.setTimeout !== 'function') {
   //  此环境中没有 setTimeout 方法！
 }
 ```
-
-## 参考
-
-[globalThis](https://github.com/tc39/proposal-global)  
-[let 和 const 命令 - ECMAScript 6 入门](https://es6.ruanyifeng.com/?search=globalThis&x=0&y=0#docs/let#globalThis-%E5%AF%B9%E8%B1%A1)

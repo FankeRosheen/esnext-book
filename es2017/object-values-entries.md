@@ -112,9 +112,3 @@ var map = new Map(Object.entries(obj))
 console.log(map)
 // Map { foo: "bar", baz: 42 }
 ```
-
-## 参考
-
-[Objet.values()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/values)  
-[Object.entries()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)  
-[对象的新增方法 - ECMAScript 6 入门](https://es6.ruanyifeng.com/#docs/object-methods#Object-values)

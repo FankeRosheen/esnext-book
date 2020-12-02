@@ -235,8 +235,3 @@ async function test() {
 
 test()
 ```
-
-## 参考
-
-[async 函数 - ECMAScript 6 入门](https://es6.ruanyifeng.com/#docs/async)  
-[Async Functions for ECMAScript](https://github.com/tc39/ecmascript-asyncawait)

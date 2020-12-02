@@ -36,7 +36,3 @@ clownPuppiesEverywhere(
 ```
 
 这样的规定也使得，函数参数与数组和对象的尾逗号规则，保持一致了。
-
-## 参考
-
-[Proposal to allow trailing commas in function parameter lists](https://github.com/tc39/proposal-trailing-function-commas)

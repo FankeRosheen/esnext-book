@@ -166,9 +166,3 @@ BigInt 对象继承了 Object 对象的两个实例方法。
 继承了 Number 对象的一个实例方法。
 
 - `BigInt.prototype.toLocaleString()`
-
-## 参考
-
-[proposal-bigint](https://github.com/tc39/proposal-bigint)  
-[数值的扩展 - ECMAScript 6 入门](https://es6.ruanyifeng.com/?search=bigint&x=0&y=0#docs/number#BigInt-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)  
-[BigInt - JavaScript | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
