@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="zerolab-fe.github.io/esnext-book/">
+  <a href="https://esnext-book.lishuaishuai.com/">
     <img width="200" src="https://raw.githubusercontent.com/zerolab-fe/esnext-book/main/assets/logo.svg">
   </a>
 </p>
@@ -39,3 +39,9 @@ ECMAScript Next 系列教程，是对 ECMAScript 新特性的整理学习笔记�
     <td align="center"><a href="https://www.lishuaishuai.com"><img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/20487014?s=460&u=5af71d67e02d53343d5432cc8f32243854c6de21&v=4" width="100px"><br /><sub><b>木子朗</b></sub></a><br /></a></td>
   </tr>
 </table>
+
+## 参考
+
+[Finished Proposals](https://github.com/tc39/proposals/blob/master/finished-proposals.md)  
+[JavaScript 参考 - JavaScript | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference)  
+[ECMAScript 6 入门](https://es6.ruanyifeng.com/)
