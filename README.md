@@ -24,15 +24,21 @@
   </a>
 </div>
 
-## 说明
+## 📘 说明
 
-ECMAScript Next 系列教程，是对 ECMAScript 新特性的整理学习笔记。
+ECMAScript Next 系列教程，是对 ECMAScript 2016、2017、2018、2019、2020 新特性的整理笔记。
 
 如果你读完本教程有收获，请帮忙传播，让更多人受益。如果有不妥之处，欢迎提 MR 更正。
 
-## 目录
+## 📖 目录
 
-## 作者
+- [ECMAScript 2016 (ES7)](https://esnext-book.lishuaishuai.com/es2016/es2016.html)
+- [ECMAScript 2017 (ES8)](https://esnext-book.lishuaishuai.com/es2017/es2017.html)
+- [ECMAScript 2018 (ES9)](https://esnext-book.lishuaishuai.com/es2018/es2018.html)
+- [ECMAScript 2019 (ES10)](https://esnext-book.lishuaishuai.com/es2019/es2019.html)
+- [ECMAScript 2020 (ES11)](https://esnext-book.lishuaishuai.com/es2020/es2020.html)
+
+## 👨‍💻 作者
 
 <table>
   <tr>
@@ -40,7 +46,7 @@ ECMAScript Next 系列教程，是对 ECMAScript 新特性的整理学习笔记�
   </tr>
 </table>
 
-## 参考
+## 📄 参考
 
 [Finished Proposals](https://github.com/tc39/proposals/blob/master/finished-proposals.md)  
 [JavaScript 参考 - JavaScript | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference)  
