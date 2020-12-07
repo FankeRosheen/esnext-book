@@ -26,7 +26,7 @@
 
 ## 📘 说明
 
-ECMAScript Next 系列教程，是对 ECMAScript 2016、2017、2018、2019、2020 新特性的整理笔记。
+ECMAScript Next 系列教程，是对 ECMAScript 2016、2017、2018、2019、2020、2021 等新特性的整理笔记。本教程系列将跟随 ECMAScript 官方已经完成的提案同步更新。
 
 如果你读完本教程有收获，请帮忙传播，让更多人受益。如果有不妥之处，欢迎提 MR 更正。
 
@@ -37,6 +37,7 @@ ECMAScript Next 系列教程，是对 ECMAScript 2016、2017、2018、2019、202
 - [ECMAScript 2018 (ES9)](https://esnext-book.lishuaishuai.com/es2018/es2018.html)
 - [ECMAScript 2019 (ES10)](https://esnext-book.lishuaishuai.com/es2019/es2019.html)
 - [ECMAScript 2020 (ES11)](https://esnext-book.lishuaishuai.com/es2020/es2020.html)
+- ECMAScript 2021 (ES12) WIP
 
 ## 👨‍💻 作者
 

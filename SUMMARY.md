@@ -1,6 +1,6 @@
 # Summary
 
-- [前言](README.md)
+- [简介](README.md)
 - [ECMAScript 2020 (ES11)](es2020/es2020.md)
   - [String.prototype.matchAll](es2020/string-matchall.md)
   - [Dynamic Import](es2020/dynamic-import.md)
@@ -20,6 +20,15 @@
   - [Well-formed JSON.stringify](es2019/well-formed-stringify.md)
   - [String.prototype.{trimStart,trimEnd}](es2019/string-left-right-trim.md)
   - [Array.prototype.{flat,flatMap}](es2019/array-prototype-flatMap.md)
+- [ECMAScript 2018 (ES9)](es2018/es2018.md)
+  - [Template Literal Revision](es2018/template-literal-revision.md)
+  - [s/dotAll flag for regular expressions](es2018/regexp-dotall-flag.md)
+  - [RegExp Named Capture Groups](es2018/regexp-named-groups.md)
+  - [Object Rest/Spread Properties](es2018/object-rest-spread.md)
+  - [RegExp Lookbehind Assertions](es2018/regexp-lookbehind.md)
+  - [Unicode property escapes in regular expressions](es2018/regexp-unicode-property-escapes.md)
+  - [Promise.prototype.finally](es2018/promise-finally.md)
+  - [Async Iteration](es2018/async-iteration.md)
 - [ECMAScript 2017 (ES8)](es2017/es2017.md)
   - [Async / Await](es2017/async-await.md)
   - [Shared Memory and Atomics](es2017/sharedmem.md)
